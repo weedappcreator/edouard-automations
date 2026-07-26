@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Syne, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -13,12 +14,14 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +29,12 @@ export const metadata: Metadata = {
   description:
     "We connect AI, automation, CRM, marketing and high-converting web experiences into one growth operating system. Serving businesses in Santo Domingo and beyond.",
   keywords: [
-    "AI automation",
-    "growth partner",
+    "AI automation Dominican Republic",
+    "growth partner Santo Domingo",
     "CRM automation",
-    "marketing systems",
-    "Santo Domingo",
-    "Dominican Republic",
+    "AI receptionist",
+    "business automation n8n",
+    "automatización con IA República Dominicana",
   ],
   openGraph: {
     title: "Edouard Automations — AI Growth Partner",
@@ -50,9 +53,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+      className={`${syne.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <body style={{ backgroundColor: "#07090C" }}>{children}</body>
+      <body suppressHydrationWarning style={{ backgroundColor: "#07090C" }}>
+        {children}
+      </body>
     </html>
   );
 }

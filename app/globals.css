@@ -38,7 +38,7 @@ html.lenis body {
   --cyan: #32d6c5;
 
   /* Font families */
-  --font-sans: var(--font-space-grotesk, "Space Grotesk", sans-serif);
+  --font-sans: var(--font-syne, "Syne", sans-serif);
   --font-serif: var(--font-instrument-serif, "Instrument Serif", serif);
   --font-mono: var(--font-jetbrains-mono, "JetBrains Mono", monospace);
 
